@@ -1,0 +1,46 @@
+<!-- app/welcome/welcome.page.html -->
+<ion-content color="tertiary" class="ion-padding"> 
+  <div class="general">
+    <div class="logo">
+      <img src="../../assets/logo.jpg" alt="">
+    </div>
+    <br>
+    <div class="texto">
+      <ion-label id="titulo">Bienvenido a PSY</ion-label>
+      <br>
+      <ion-label id="subTitulo">Tu compañía emocional en un solo lugar</ion-label>
+    </div>
+    <br>
+    <br>
+    <ion-button routerLink="/login" class="comenzar" shape="round">
+      <ion-label>Comencemos</ion-label>
+    </ion-button>
+    <br><br>
+    <div class="iSesionCon">
+      <div class="or">
+        <div class="rectangle-2"></div>
+        <div class="inicia-con">Inicia con</div>
+        <div class="rectangle-1"></div>
+      </div>
+      <br><br>
+      <div class="icons">
+        <ion-button (click)="loginWithGoogle()" class="google-button" shape="round" expand="full">
+          <ion-icon name="logo-google"></ion-icon>
+          <ion-label>Google</ion-label>
+        </ion-button>
+        <ion-button class="facebook-button"  shape="round" expand="full">
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label>Facebook</ion-label>
+        </ion-button>
+      </div>
+      <br><br>
+      <div class="texto">
+        <ion-label>¿Aún no tienes una cuenta? </ion-label>
+        <ion-router-link routerLink="/sign-up"><ion-label>Sign up</ion-label></ion-router-link>
+      </div>
+    </div>
+  </div>
+  <ion-button (click)="getUsuarios()" shape="round" expand="full">
+    Click me
+  </ion-button>
+</ion-content>
