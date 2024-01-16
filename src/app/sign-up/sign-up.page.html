@@ -1,13 +1,43 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>SignUp</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">SignUp</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" color="tertiary">
+  <div class="general"> <!-- Este el el contenedor general que engloba todos los elementos que estan adentro -->
+    <div class="regresar"> <!-- Igual es un contenedor, pero este es mas pequeño y engloba solo el boton para regresar al menu inicial  -->
+      <a href="/home">
+        <img src="../../assets/arrow-left.png" alt="">
+      </a>
+    </div>
+    <ion-back-button></ion-back-button>
+    <br>
+    <div class="texto">
+      <ion-label id="titulo">Registrate en PSY</ion-label>
+      <br><br>
+      <div class="contTex">
+        <ion-label id="text">Descubre nuestra aplicacion e indaga todas sus funcionalidades que te ayudaran con tu estado emocional</ion-label>
+      </div>
+    </div>
+    <br><br>
+    <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()">
+      <ion-item color="primary">
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input FormControlName="nombre"></ion-input>
+      </ion-item>
+      <ion-item color="primary">
+        <ion-label position="floating">correo</ion-label>
+        <ion-input FormControlName="correo" type="password"></ion-input>
+      </ion-item>
+      <ion-item color="primary">
+        <ion-label position="floating">Contraseña (Min. 8 caracteres)</ion-label>
+        <ion-input FormControlName="contraseña" type="password"></ion-input>
+      </ion-item>
+    </form>
+    <br><br>
+    <div class="SingUp">
+        <ion-button class="boton" shape="round" (click)="guardar()">Sing up</ion-button>
+    </div> 
+    <br><br>
+    <div id="texinf">
+      <ion-label id="terCond">Al registrarte aceptas todos nuestros terminos y condicione y nuestra plotica de privacidad de esta aplicacion</ion-label>
+      <ion-label>¿Ya tienes una cuenta? </ion-label>
+      <a href="sign-up"><ion-label>Sign in</ion-label></a>
+    </div>
+  </div>
 </ion-content>
